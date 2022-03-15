@@ -3,7 +3,7 @@
 /**
  * print_alphabet_x10.c - print alphabet 10 times
  *
- * Return: Always 0;
+ * Return:always 0;
  *
  */
 void print_alphabet_x10(void)
