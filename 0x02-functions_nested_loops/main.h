@@ -30,7 +30,7 @@ int print_sign(int n);
  * @int: integer
  * Return: integer or abs value of int
  */
-int abs(int);
+int _abs(int);
 
 int  print_last_digit(int);
 
