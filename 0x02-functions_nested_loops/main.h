@@ -41,7 +41,11 @@ void times_table(void);
 int add(int, int);
 
 void print_to_98(int n);
-
+/**
+ * print_to_98 - print natural numbers to 98
+ *
+ * Return Always 0 -Success
+ */
 void print_times_table(int n);
 
 #endif
