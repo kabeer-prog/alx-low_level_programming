@@ -1,46 +1,34 @@
 #include "main.h"
 
 /**
- * print_number - prints number
+ * print_number - prints an integer
  *
- * @n: integer to print to character
+ * @n: int to print
+ *
+ * Return: void
  */
 void print_number(int n)
 {
-	int i;
-	int d = 1;
-	unsigned int x = n;
-	unsigned int y = n;
-	int c = 0;
+	/* range start from 0 to the upper positive number limit */
+	unsigned int n1, hp;
 
-	if (n == 0)
-	{
-		_putchar('0');
-	}
+	/* Put '-' for negative values of n */
 	if (n < 0)
 	{
 		_putchar('-');
-		n = n + 1;
-		n = -n;
-		y = n;
-		x = n;
-		x += 1;
-		y += 1;
+		n *= -1;
 	}
 
-	while (x != 0)
+	/* get the highest power for n */
+	n1 = n;
+	hp = 1;
+
+	while (n1 > 9)
 	{
-		x = x / 10;
-		c++;
-	}
-	for (i = 1; i < c; i++)
-	{
-		d *= 10;
-	}
-	for (i = 0; i < c; i++)
-	{
-		_putchar(y / d + '0');
-		y = y % d;
-		d = d / 10;
-	}
+		n1 /= 10;
+		hp *= 10;
+	};
+
+	for (; hp >= 1; hp /= 10)
+		_putchar(((n / hp) % 10) + '0');
 }
