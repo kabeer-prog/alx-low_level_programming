@@ -1,1 +1,1 @@
-Function nested loops for c lang
+Function nested loops for c language
